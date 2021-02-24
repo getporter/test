@@ -1,7 +1,9 @@
 _extends: .github
 
-description: "A test repo for github settings"
-
+repository:
+  description: "A test repo for github settings"
+  topics: test
+ 
 labels:
 - name: "le test"
   color: "#333"
