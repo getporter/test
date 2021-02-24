@@ -1,9 +1,18 @@
 _extends: .github
 
-description: "A test repo for github settings"
-
+repository:
+  description: "A test repo for github settings"
+  topics: test
+ 
 labels:
 - name: "le test"
   color: "#333"
   description: "a merged label"
 
+# Let admins test in this repo without approval requirements
+branches:
+  - name: main
+    protection:
+      required_pull_request_reviews: null
+      required_status_checks: null
+      enforce_admins: false
