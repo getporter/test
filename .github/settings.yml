@@ -1,0 +1,9 @@
+_extends: .github
+
+description: "A test repo for github settings"
+
+labels:
+- name: "le test"
+  color: "#333"
+  description: "a merged label"
+
