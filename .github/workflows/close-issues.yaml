@@ -7,17 +7,13 @@ on:
   pull_request_target:
     types: [closed]
     branches:
-      - release/v1
+      - release/*
 
 jobs:
-  debug:
+  closeIssue:
     runs-on: ubuntu-latest
     steps:
-      - run: echo "and I ran, I ran so far away"
-#  closeIssue:
-#    runs-on: ubuntu-latest
-#    steps:
-#      - name: Closes issues related to a merged pull request.
-#        uses: docker://carolynvs/gha-mjolnir:v1.0.3-pullrequesttarget
-#        env:
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      - name: Closes issues related to a merged pull request.
+        uses: docker://carolynvs/gha-mjolnir:v1.0.3-pullrequesttarget
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
