@@ -1,0 +1,19 @@
+# Close issues when the pull request was merged into the non-default branch
+# i.e. when we merge into the release/v1 branch, immediately close the issue
+
+name: Close Completed Issues
+
+on:
+  pull_request_target:
+    types: [closed]
+    branches:
+      - release/*
+
+jobs:
+  closeIssue:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Closes issues related to a merged pull request.
+        uses: carolynvs/gha-mjolnir:v1.0.3-pullrequesttarget
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
