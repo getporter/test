@@ -6,7 +6,7 @@ jobs:
   claim:
     runs-on: ubuntu-latest
     steps:
-    - uses: bhermann/issue-volunteer@v0.1.12
+    - uses: bhermann/issue-volunteer@af4116e785a44af1f336649f1f79948e44126255
       with:
         assign_phrase: "/assign"
         GITHUB_TOKEN: "${{ secrets.GITHUB_TOKEN }}"
