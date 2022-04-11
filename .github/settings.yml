@@ -6,7 +6,7 @@ repository:
  
 labels:
 - name: "le test"
-  color: "#333"
+  color: "#0000FF"
   description: "a merged label"
 
 # Let admins test in this repo without approval requirements
